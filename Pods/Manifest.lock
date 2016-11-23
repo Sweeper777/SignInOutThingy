@@ -1,0 +1,15 @@
+PODS:
+  - Eureka (2.0.0-beta.1)
+  - EZSwiftExtensions (1.7)
+
+DEPENDENCIES:
+  - Eureka (~> 2.0.0-beta.1)
+  - EZSwiftExtensions
+
+SPEC CHECKSUMS:
+  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
+  EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
+
+PODFILE CHECKSUM: 24620b1439d41766e3ac2cd93deb52c80689da76
+
+COCOAPODS: 1.1.0.beta.1
