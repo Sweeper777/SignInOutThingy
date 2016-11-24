@@ -24,4 +24,8 @@ extension Entry {
         
         return returnValue
     }
+    
+    var isIn: Bool {
+        return returnTime == nil
+    }
 }
