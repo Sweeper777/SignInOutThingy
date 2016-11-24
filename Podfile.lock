@@ -1,15 +1,18 @@
 PODS:
   - Eureka (2.0.0-beta.1)
   - EZSwiftExtensions (1.7)
+  - SwiftDate (4.0.7)
 
 DEPENDENCIES:
   - Eureka (~> 2.0.0-beta.1)
   - EZSwiftExtensions
+  - SwiftDate
 
 SPEC CHECKSUMS:
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
+  SwiftDate: 0efb04a6751b1ab804049b2b09a69848cd304c12
 
-PODFILE CHECKSUM: 24620b1439d41766e3ac2cd93deb52c80689da76
+PODFILE CHECKSUM: 85e28f5da4d9cf05e41931d056fce4e6e8dafc81
 
 COCOAPODS: 1.1.0.beta.1
