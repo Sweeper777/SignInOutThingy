@@ -4,7 +4,7 @@ class RecordsController: UITableViewController {
     var entries: [Entry]?
     
     override func viewDidLoad() {
-        if let entries = CoreDataHelper.allEntries {
+        if let entries = CoreDataHelper.entriesToday {
             self.entries = entries
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to get records.", preferredStyle: .alert)
@@ -19,7 +19,7 @@ class RecordsController: UITableViewController {
     
     @IBAction func unwindFromSignInOut(segue: UIStoryboardSegue) {
         CoreDataHelper.updateData()
-        self.entries = CoreDataHelper.allEntries
+        self.entries = CoreDataHelper.entriesToday
         tableView.reloadData()
     }
     
