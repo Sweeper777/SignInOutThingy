@@ -1,13 +1,16 @@
 import Eureka
+import CoreData
 
 class SignInOutFormController: FormViewController {
+    let people = ["Narek", "Jack", "Jeremy", "David"]
+    @IBOutlet var signInOutButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         form +++ PickerInlineRow<String>(tagLocation) {
             row in
             row.title = "Location"
             row.options = ["Location 1", "Location 2", "Location 3", "Custom"]
-            row.value = "Location 1"
         }
         
             <<< TextRow(tagCustomLocation) {
