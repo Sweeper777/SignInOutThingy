@@ -82,6 +82,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sc6-G8-cEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BiJ-kb-Qw1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="798" y="-518"/>
         </scene>
@@ -105,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="797" y="240"/>
         </scene>
-        <!--Select People-->
+        <!--Sign In/Out-->
         <scene sceneID="ekB-yC-wFu">
             <objects>
                 <viewController id="Hde-oV-DZO" customClass="SignInOutFormController" customModule="SignInOutThingy" customModuleProvider="target" sceneMemberID="viewController">
@@ -118,17 +119,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select People" id="J9J-2E-9yi">
+                    <navigationItem key="navigationItem" title="Sign In/Out" id="J9J-2E-9yi">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="35C-di-spc">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancel:" destination="Hde-oV-DZO" id="V3m-eJ-Ton"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Title" id="0Jb-t8-ywC">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="0Jb-t8-ywC">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="signInOut:" destination="Hde-oV-DZO" id="H0h-Qr-byU"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="signInOutButton" destination="0Jb-t8-ywC" id="tZf-lV-lJA"/>
+                        <segue destination="BiJ-kb-Qw1" kind="unwind" identifier="signInOut" unwindAction="unwindFromSignInOutWithSegue:" id="0qT-8D-dtO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72b-MZ-lD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
