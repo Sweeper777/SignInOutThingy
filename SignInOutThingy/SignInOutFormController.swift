@@ -62,4 +62,36 @@ class SignInOutFormController: FormViewController {
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func signInOut(_ sender: Any) {
+        func showErrorMessage(_ msg: String) {
+            let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.presentVC(alert)
+        }
+        
+        let values = form.values(includeHidden: false)
+        let location = (values[tagLocation] as? String == "Custom" ? values[tagCustomLocation] : values[tagLocation]) as? String
+        guard location != nil && location!.trimmed() != "" else {
+            showErrorMessage("Please select a location!")
+            return
+        }
+        
+        var selectedPeople = [String]()
+        for person in people {
+            if let selected = values["\(tagPerson)_\(person)"] as? Bool {
+                if selected {
+                    selectedPeople.append(person)
+                }
+            }
+        }
+        
+        if selectedPeople.isEmpty {
+            showErrorMessage("Please select a person!")
+            return
+        }
+        
+        
+        performSegue(withIdentifier: "signInOut", sender: self)
+    }
 }
