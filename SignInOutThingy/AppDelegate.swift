@@ -1,13 +1,6 @@
-//
-//  AppDelegate.swift
-//  SignInOutThingy
-//
-//  Created by Mulang Su on 22/11/2016.
-//  Copyright © 2016 Mulang Su. All rights reserved.
-//
-
 import UIKit
 import CoreData
+import EZSwiftExtensions
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +9,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window?.tintColor = UIColor(hexString: "3b7b3b")
         return true
     }
 
