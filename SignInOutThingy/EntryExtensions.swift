@@ -1,11 +1,11 @@
 import CoreData
 
 extension Entry {
-    convenience init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?, name: String, location: String) {
+    convenience init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?, name: String, secondaryItem: String) {
         self.init(entity: entity, insertInto: context)
         self.name = name
-        self.location = name
-        self.goTime = NSDate()
+        self.secondaryItem = secondaryItem
+        self.time1 = NSDate()
     }
     
     public override var description: String {
@@ -17,15 +17,24 @@ extension Entry {
         timeFormatter.dateStyle = .none
         timeFormatter.timeStyle = .long
         
-        var returnValue = "[\(dateFormatter.string(from: goTime as! Date))] \(name) went to \(location) at \(timeFormatter.string(from: goTime as! Date))"
-        if let returnTime = self.returnTime {
-            returnValue += " and returned at \(timeFormatter.string(from: returnTime as Date))"
+        if !isVisitor {
+            var returnValue = "[\(dateFormatter.string(from: time1 as! Date))] \(name) went to \(secondaryItem) at \(timeFormatter.string(from: time1 as! Date))"
+            if let time2 = self.time2 {
+                returnValue += " and returned at \(timeFormatter.string(from: time2 as Date))"
+            }
+            
+            return returnValue
+        } else {
+            var returnValue = "[\(dateFormatter.string(from: time1 as! Date))] \(secondaryItem) visited \(name) at \(timeFormatter.string(from: time1 as! Date))"
+            if let time2 = self.time2 {
+                returnValue += " and left at \(timeFormatter.string(from: time2 as Date))"
+            }
+            
+            return returnValue
         }
-        
-        return returnValue
     }
     
-    var isIn: Bool {
-        return returnTime == nil
+    var isComplete: Bool {
+        return time2 == nil
     }
 }

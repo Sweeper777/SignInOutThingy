@@ -3,7 +3,7 @@ import UIKit
 import SwiftDate
 
 class CoreDataHelper {
-    private static var context = {
+    static var context = {
        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }()
     
@@ -23,15 +23,15 @@ class CoreDataHelper {
     
     static var entriesToday: [Entry]! {
         if let entries = allEntries {
-            return entries.filter { ($0.goTime as! Date).isTheSameDayAs(Date()) }
+            return entries.filter { ($0.time1 as! Date).isTheSameDayAs(Date()) }
         }
         return nil
     }
     
-    static func isPersonIn(person: String) -> Bool {
+    static func hasPersonCompletedEntry(person: String) -> Bool {
         let personsEntries = entriesToday.filter { $0.name == person }
-        if let lastEntry = personsEntries.sorted(by: { ($0.0.goTime as! Date) < ($0.1.goTime as! Date) } ).last {
-            return lastEntry.isIn
+        if let lastEntry = personsEntries.sorted(by: { ($0.0.time1 as! Date) < ($0.1.time1 as! Date) } ).last {
+            return lastEntry.isComplete
         } else {
             return true
         }
