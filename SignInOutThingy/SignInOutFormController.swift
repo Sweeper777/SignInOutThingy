@@ -96,6 +96,16 @@ class SignInOutFormController: FormViewController {
             return
         }
         
+        for person in selectedPeople {
+            if inOrOut == "Out" {
+                _ = Entry(entity: NSEntityDescription.entity(forEntityName: "Entry", in: CoreDataHelper.context)!, insertInto: CoreDataHelper.context, name: person, secondaryItem: location!)
+                try? CoreDataHelper.context.save()
+            } else {
+                let entry = (CoreDataHelper.entriesToday.filter { $0.name == person }).sorted(by: { ($0.0.time1 as! Date) < ($0.1.time1 as! Date) } ).last!
+                entry.time2 = NSDate()
+                try? CoreDataHelper.context.save()
+            }
+        }
         
         performSegue(withIdentifier: "signInOut", sender: self)
     }
