@@ -28,10 +28,14 @@ class CoreDataHelper {
         return nil
     }
     
-    static func hasPersonCompletedEntry(person: String) -> Bool {
+    static func hasPersonCompletedEntry(person: String, isVisitor: Bool) -> Bool? {
         let personsEntries = entriesToday.filter { $0.name == person }
         if let lastEntry = personsEntries.sorted(by: { ($0.0.time1 as! Date) < ($0.1.time1 as! Date) } ).last {
-            return lastEntry.isComplete
+            if lastEntry.isVisitor != isVisitor {
+                return nil
+            } else {
+                return lastEntry.isComplete
+            }
         } else {
             return true
         }
