@@ -31,6 +31,10 @@ class CoreDataHelper {
     static func hasPersonCompletedEntry(person: String, isVisitor: Bool) -> Bool? {
         let personsEntries = entriesToday.filter { $0.name == person }
         if let lastEntry = personsEntries.sorted(by: { ($0.0.time1 as! Date) < ($0.1.time1 as! Date) } ).last {
+            if lastEntry.isComplete {
+                return true
+            }
+            
             if lastEntry.isVisitor != isVisitor {
                 return nil
             } else {
@@ -47,5 +51,9 @@ extension Date {
         return self.day == other.day &&
             self.month == other.month &&
             self.year == other.year
+    }
+    
+    func ignoreTimeComponents() -> Date {
+        return try! self.atTime(hour: 0, minute: 0, second: 0)
     }
 }
