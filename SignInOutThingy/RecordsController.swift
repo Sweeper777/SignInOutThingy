@@ -17,6 +17,14 @@ class RecordsController: UITableViewController {
         performSegue(withIdentifier: "signInOut", sender: self)
     }
     
+    @IBAction func visitorBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "visitorSignInOut", sender: self)
+    }
+    
+    @IBAction func archiveBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "viewArchives", sender: self)
+    }
+    
     @IBAction func unwindFromSignInOut(segue: UIStoryboardSegue) {
         CoreDataHelper.updateData()
         self.entries = CoreDataHelper.entriesToday

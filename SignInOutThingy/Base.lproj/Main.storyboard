@@ -65,6 +65,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sign In/Out Records" id="RPh-TX-FHn">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Visitors" id="wxj-AS-f23">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="visitorBtnPressed:" destination="r7G-l1-W1I" id="f7h-dV-PQ1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Archives" id="S0A-Yw-xar">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="archiveBtnPressed:" destination="r7G-l1-W1I" id="rV1-FQ-oTa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Statuses" id="p4n-aA-Z8i">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem title="Sign In/Out" id="sZy-wt-Ynv">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,12 +96,132 @@
                     </navigationItem>
                     <connections>
                         <segue destination="dW0-D3-IyJ" kind="presentation" identifier="signInOut" modalPresentationStyle="formSheet" id="ZKN-tz-A8X"/>
+                        <segue destination="oDG-oC-ARr" kind="presentation" identifier="visitorSignInOut" modalPresentationStyle="formSheet" id="uiZ-9m-gFM"/>
+                        <segue destination="NW7-6O-bOL" kind="presentation" identifier="viewArchives" modalPresentationStyle="pageSheet" id="oq4-7g-1O0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sc6-G8-cEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BiJ-kb-Qw1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="798" y="-518"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="32M-sP-png">
+            <objects>
+                <navigationController id="NW7-6O-bOL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uic-nV-fbF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c9d-Uf-dMc" kind="relationship" relationship="rootViewController" id="tmk-88-vgX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPb-kv-WGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="215"/>
+        </scene>
+        <!--Archives-->
+        <scene sceneID="D6O-GH-uHf">
+            <objects>
+                <tableViewController id="c9d-Uf-dMc" customClass="ArchivesController" customModule="SignInOutThingy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="stX-c8-J29">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="6uy-E6-VBf" detailTextLabel="QeN-Z3-jV6" style="IBUITableViewCellStyleValue1" id="i4V-WA-weE">
+                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i4V-WA-weE" id="IxD-u8-lmL">
+                                    <rect key="frame" x="0.0" y="0.0" width="830" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6uy-E6-VBf">
+                                            <rect key="frame" x="176" y="11" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QeN-Z3-jV6">
+                                            <rect key="frame" x="786" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c9d-Uf-dMc" id="JXC-ng-Ii1"/>
+                            <outlet property="delegate" destination="c9d-Uf-dMc" id="Q1L-17-hSR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Archives" id="Zsf-Iq-Dg8">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="GbO-eh-2xb">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="BiJ-kb-Qw1" kind="unwind" unwindAction="unwindFromSignInOutWithSegue:" id="dnw-dZ-c1w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ERH-5c-c7I" kind="show" identifier="showArchive" id="Ee8-aW-l2L"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R1P-RU-orB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="927"/>
+        </scene>
+        <!--Archive Viewer Controller-->
+        <scene sceneID="jHU-k4-a0m">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ERH-5c-c7I" customClass="ArchiveViewerController" customModule="SignInOutThingy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SPb-6t-y4e"/>
+                        <viewControllerLayoutGuide type="bottom" id="mGw-u2-ZTk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mb3-Dy-e1H">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBH-jU-xHa">
+                                <rect key="frame" x="0.0" y="64" width="1024" height="660"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oBH-jU-xHa" firstAttribute="top" secondItem="SPb-6t-y4e" secondAttribute="bottom" id="XXf-LA-YGI"/>
+                            <constraint firstItem="oBH-jU-xHa" firstAttribute="bottom" secondItem="mGw-u2-ZTk" secondAttribute="top" id="jVS-lb-YtN"/>
+                            <constraint firstAttribute="trailing" secondItem="oBH-jU-xHa" secondAttribute="trailing" id="oqR-1h-iau"/>
+                            <constraint firstItem="oBH-jU-xHa" firstAttribute="leading" secondItem="mb3-Dy-e1H" secondAttribute="leading" id="v21-Sm-ppL"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VBx-nc-sKY">
+                        <barButtonItem key="rightBarButtonItem" title="Print" id="qOE-g2-NcZ">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="print:" destination="ERH-5c-c7I" id="CSy-7y-QQ0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="oBH-jU-xHa" id="6t2-7w-Bnh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlb-yO-PT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317" y="927"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b0C-Ft-b3e">
@@ -104,7 +241,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvX-iC-Qni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797" y="240"/>
+            <point key="canvasLocation" x="1132" y="199"/>
         </scene>
         <!--Sign In/Out-->
         <scene sceneID="ekB-yC-wFu">
@@ -140,7 +277,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72b-MZ-lD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="240"/>
+            <point key="canvasLocation" x="1521" y="198"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dwN-d5-P9O">
+            <objects>
+                <navigationController id="oDG-oC-ARr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T5n-u0-OuL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MMM-WA-Wdo" kind="relationship" relationship="rootViewController" id="OV1-KL-Q3O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p73-eb-Mt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="-520"/>
+        </scene>
+        <!--Visitors Sign In/Out-->
+        <scene sceneID="Goe-Ww-zLb">
+            <objects>
+                <viewController id="MMM-WA-Wdo" customClass="VisitorsFormController" customModule="SignInOutThingy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zpa-BF-lsA"/>
+                        <viewControllerLayoutGuide type="bottom" id="m2T-N9-Ygy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KKc-RR-rLm">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Visitors Sign In/Out" id="V9q-tu-K6z">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i1i-mb-3CS">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="MMM-WA-Wdo" id="DRZ-Sz-IQj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Sign In" id="P2s-o3-Sg8">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="signInOut:" destination="MMM-WA-Wdo" id="zvQ-Ix-dHb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="signInOutButton" destination="P2s-o3-Sg8" id="6n8-qS-yqN"/>
+                        <segue destination="BiJ-kb-Qw1" kind="unwind" identifier="signInOut" unwindAction="unwindFromSignInOutWithSegue:" id="IG4-Zd-szk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNP-p7-pwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="-520"/>
         </scene>
     </scenes>
 </document>
