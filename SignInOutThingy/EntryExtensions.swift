@@ -10,25 +10,26 @@ extension Entry {
     }
     
     public override var description: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
         
         let timeFormatter = DateFormatter()
         timeFormatter.dateStyle = .none
         timeFormatter.timeStyle = .medium
         
         if !isVisitor {
-            var returnValue = "[\(dateFormatter.string(from: time1 as! Date))] \(name!) went to \(secondaryItem!) at \(timeFormatter.string(from: time1 as! Date))"
+            var returnValue = "\(name!) went to \(secondaryItem!) at \(timeFormatter.string(from: time1 as! Date))"
             if let time2 = self.time2 {
                 returnValue += " and returned at \(timeFormatter.string(from: time2 as Date))"
+            } else if !(time1 as! Date).isToday {
+                returnValue += " <b>and forgot to sign in</b>"
             }
             
             return returnValue
         } else {
-            var returnValue = "[\(dateFormatter.string(from: time1 as! Date))] \(secondaryItem!) visited \(name!) at \(timeFormatter.string(from: time1 as! Date))"
+            var returnValue = "\(secondaryItem!) visited \(name!) at \(timeFormatter.string(from: time1 as! Date))"
             if let time2 = self.time2 {
                 returnValue += " and left at \(timeFormatter.string(from: time2 as Date))"
+            } else if !(time1 as! Date).isToday {
+                returnValue += " <b>and forgot to sign out</b>"
             }
             
             return returnValue
