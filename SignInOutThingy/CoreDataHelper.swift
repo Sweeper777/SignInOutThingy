@@ -44,6 +44,14 @@ class CoreDataHelper {
             return true
         }
     }
+    
+    static var locationList: [String] {
+        return (UserDefaults.standard.string(forKey: tagLocationList) ?? "").split("\n").filter { $0.trimmed() != "" }.sorted()
+    }
+    
+    static var nameList: [String] {
+        return (UserDefaults.standard.string(forKey: tagNameList) ?? "").split("\n").filter { $0.trimmed() != "" }.sorted()
+    }
 }
 
 extension Date {
