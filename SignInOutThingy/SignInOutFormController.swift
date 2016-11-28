@@ -2,15 +2,19 @@ import Eureka
 import CoreData
 
 class SignInOutFormController: FormViewController {
-    let people = ["Narek", "Jack", "Jeremy", "David"]
+    let people = CoreDataHelper.nameList
     @IBOutlet var signInOutButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
         form +++ PushRow<String>(tagLocation) {
             row in
             row.title = "Location"
-            row.options = ["Location 1", "Location 2", "Location 3", "Custom"]
+            var options = CoreDataHelper.locationList
+            options.append("Custom")
+            row.options = options
         }
         
             <<< TextRow(tagCustomLocation) {
