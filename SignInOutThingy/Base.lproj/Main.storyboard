@@ -80,6 +80,9 @@
                             </barButtonItem>
                             <barButtonItem title="Statuses" id="p4n-aA-Z8i">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="statusesBtnPressed:" destination="r7G-l1-W1I" id="mLE-hV-0AC"/>
+                                </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
                         <rightBarButtonItems>
@@ -91,6 +94,9 @@
                             </barButtonItem>
                             <barButtonItem title="Options" id="bvz-yZ-hfg">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="optionsBtnPressed:" destination="r7G-l1-W1I" id="Pgc-cP-uvW"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -98,6 +104,8 @@
                         <segue destination="dW0-D3-IyJ" kind="presentation" identifier="signInOut" modalPresentationStyle="formSheet" id="ZKN-tz-A8X"/>
                         <segue destination="oDG-oC-ARr" kind="presentation" identifier="visitorSignInOut" modalPresentationStyle="formSheet" id="uiZ-9m-gFM"/>
                         <segue destination="NW7-6O-bOL" kind="presentation" identifier="viewArchives" modalPresentationStyle="pageSheet" id="oq4-7g-1O0"/>
+                        <segue destination="QeG-X4-sKu" kind="presentation" identifier="showOptions" modalPresentationStyle="formSheet" id="5q7-i4-Ltl"/>
+                        <segue destination="gDb-uO-cVX" kind="presentation" identifier="showStatuses" modalPresentationStyle="formSheet" id="ErY-Ro-cyM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sc6-G8-cEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -138,18 +146,18 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i4V-WA-weE" id="IxD-u8-lmL">
-                                    <rect key="frame" x="0.0" y="0.0" width="830" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="830" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6uy-E6-VBf">
-                                            <rect key="frame" x="176" y="11" width="34" height="21"/>
+                                            <rect key="frame" x="176" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QeN-Z3-jV6">
-                                            <rect key="frame" x="786" y="11" width="44" height="21"/>
+                                            <rect key="frame" x="786" y="12" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -207,12 +215,20 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VBx-nc-sKY">
-                        <barButtonItem key="rightBarButtonItem" title="Print" id="qOE-g2-NcZ">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="print:" destination="ERH-5c-c7I" id="CSy-7y-QQ0"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Print" id="qOE-g2-NcZ">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="print:" destination="ERH-5c-c7I" id="CSy-7y-QQ0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Mail" id="oGJ-5H-deE">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="mail:" destination="ERH-5c-c7I" id="bfp-od-RQv"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -221,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlb-yO-PT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="927"/>
+            <point key="canvasLocation" x="649" y="1673"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b0C-Ft-b3e">
@@ -277,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72b-MZ-lD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="198"/>
+            <point key="canvasLocation" x="1131" y="869"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dwN-d5-P9O">
@@ -297,7 +313,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p73-eb-Mt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="-520"/>
+            <point key="canvasLocation" x="1436" y="-519"/>
         </scene>
         <!--Visitors Sign In/Out-->
         <scene sceneID="Goe-Ww-zLb">
@@ -333,7 +349,125 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNP-p7-pwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720" y="-520"/>
+            <point key="canvasLocation" x="1890" y="-518"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TeY-ZI-Yk3">
+            <objects>
+                <navigationController id="QeG-X4-sKu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FEf-eI-uSq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cej-NN-9tH" kind="relationship" relationship="rootViewController" id="P59-HV-7JL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hpm-xS-fos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="-1100"/>
+        </scene>
+        <!--Options-->
+        <scene sceneID="gLF-at-YkQ">
+            <objects>
+                <viewController id="cej-NN-9tH" customClass="OptionsFormController" customModule="SignInOutThingy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="52h-il-fzX"/>
+                        <viewControllerLayoutGuide type="bottom" id="vxD-ts-95E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WmF-bw-5kg">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Options" id="qrK-cJ-fzc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IhS-xE-74j">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="done:" destination="cej-NN-9tH" id="0O4-rG-9kh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0H-8I-akd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="-1100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SA4-NA-Ibt">
+            <objects>
+                <navigationController id="gDb-uO-cVX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yin-wD-FLU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Sc-Ul-deb" kind="relationship" relationship="rootViewController" id="l7D-Sf-6bc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dli-QF-Kmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573" y="198"/>
+        </scene>
+        <!--Statuses-->
+        <scene sceneID="f3u-Qj-47N">
+            <objects>
+                <tableViewController id="8Sc-Ul-deb" customClass="StatusesController" customModule="SignInOutThingy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hgP-bD-AmQ">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="aZA-Or-FUg" detailTextLabel="zEz-d5-OwA" style="IBUITableViewCellStyleValue1" id="Mca-gp-PjJ">
+                                <rect key="frame" x="0.0" y="28" width="540" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mca-gp-PjJ" id="mCK-k5-qG3">
+                                    <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZA-Or-FUg">
+                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zEz-d5-OwA">
+                                            <rect key="frame" x="481" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Sc-Ul-deb" id="Cnf-e7-8FJ"/>
+                            <outlet property="delegate" destination="8Sc-Ul-deb" id="WxA-ba-xrJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Statuses" id="wOu-dU-Zq2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hEF-Ja-ojK">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="done:" destination="8Sc-Ul-deb" id="IQR-gn-7G3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUw-vZ-S6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="198"/>
         </scene>
     </scenes>
 </document>
