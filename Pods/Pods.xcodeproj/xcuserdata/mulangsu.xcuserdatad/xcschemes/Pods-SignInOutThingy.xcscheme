@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E96A5299B6BE1F7C514167C9D325D0DD"
+               BlueprintIdentifier = "F8A0892B7EAFDDF818688F83DE37D38A"
                BuildableName = "Pods_SignInOutThingy.framework"
                BlueprintName = "Pods-SignInOutThingy"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E96A5299B6BE1F7C514167C9D325D0DD"
+            BlueprintIdentifier = "F8A0892B7EAFDDF818688F83DE37D38A"
             BuildableName = "Pods_SignInOutThingy.framework"
             BlueprintName = "Pods-SignInOutThingy"
             ReferencedContainer = "container:Pods.xcodeproj">

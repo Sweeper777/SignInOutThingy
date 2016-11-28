@@ -1,18 +1,21 @@
 PODS:
+  - BNHtmlPdfKit (0.4.2)
   - Eureka (2.0.0-beta.1)
   - EZSwiftExtensions (1.7)
   - SwiftDate (4.0.7)
 
 DEPENDENCIES:
+  - BNHtmlPdfKit
   - Eureka (~> 2.0.0-beta.1)
   - EZSwiftExtensions
   - SwiftDate
 
 SPEC CHECKSUMS:
+  BNHtmlPdfKit: f62aeccf09475e491a6ea3ad949e47f49a5c55a5
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   SwiftDate: 0efb04a6751b1ab804049b2b09a69848cd304c12
 
-PODFILE CHECKSUM: 85e28f5da4d9cf05e41931d056fce4e6e8dafc81
+PODFILE CHECKSUM: 45597a2a9979670eba777801d6e95f35811b033b
 
 COCOAPODS: 1.1.0.beta.1
