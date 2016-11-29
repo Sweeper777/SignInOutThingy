@@ -12,6 +12,9 @@
 		5A192F101DE6188E00D7D57E /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A192F0D1DE6188E00D7D57E /* EZSwiftExtensions.framework */; };
 		5A192F111DE6188E00D7D57E /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A192F0E1DE6188E00D7D57E /* SwiftDate.framework */; };
 		5A192F131DE61D4900D7D57E /* FormTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A192F121DE61D4900D7D57E /* FormTags.swift */; };
+		5A1A55B91DEAC93800D2124B /* BNHtmlPdfKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1A55B81DEAC93800D2124B /* BNHtmlPdfKit.framework */; };
+		5A1A55BB1DEB4D1200D2124B /* OptionsFormControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A55BA1DEB4D1200D2124B /* OptionsFormControllerViewController.swift */; };
+		5A1A55BD1DEB80F000D2124B /* StatusesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A55BC1DEB80F000D2124B /* StatusesController.swift */; };
 		5A1C6D2B1DE4276C00CEF77E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C6D2A1DE4276C00CEF77E /* AppDelegate.swift */; };
 		5A1C6D2D1DE4276C00CEF77E /* RecordsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C6D2C1DE4276C00CEF77E /* RecordsController.swift */; };
 		5A1C6D301DE4276C00CEF77E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C6D2E1DE4276C00CEF77E /* Main.storyboard */; };
@@ -20,6 +23,10 @@
 		5A1C6D4B1DE4B72700CEF77E /* SignInOutThingy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C6D491DE4B72700CEF77E /* SignInOutThingy.xcdatamodeld */; };
 		5A1C6D4D1DE4B7BE00CEF77E /* EntryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C6D4C1DE4B7BE00CEF77E /* EntryExtensions.swift */; };
 		5A1C6D4F1DE4E57C00CEF77E /* SignInOutFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C6D4E1DE4E57C00CEF77E /* SignInOutFormController.swift */; };
+		5A1F87011DE98AA300110FCD /* VisitorsFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F87001DE98AA300110FCD /* VisitorsFormController.swift */; };
+		5A4313B31DEA1D9A00839CD6 /* ArchiveViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4313B21DEA1D9A00839CD6 /* ArchiveViewerController.swift */; };
+		5A4313B51DEA34D400839CD6 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5A4313B41DEA34D400839CD6 /* modest.css */; };
+		5AE02C111DEA0CD100F6036F /* ArchivesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE02C101DEA0CD100F6036F /* ArchivesController.swift */; };
 		EBECFC1F3E53A5CE61B73DB7 /* Pods_SignInOutThingy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF70BD97AA3ED5A31353011 /* Pods_SignInOutThingy.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +38,9 @@
 		5A192F0D1DE6188E00D7D57E /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = "../../Library/Developer/Xcode/DerivedData/SignInOutThingy-ccvhzzspbgrmcmfzhqwevuahzisc/Build/Products/Debug-iphonesimulator/EZSwiftExtensions/EZSwiftExtensions.framework"; sourceTree = "<group>"; };
 		5A192F0E1DE6188E00D7D57E /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = "Pods/../build/Debug-iphoneos/SwiftDate/SwiftDate.framework"; sourceTree = "<group>"; };
 		5A192F121DE61D4900D7D57E /* FormTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTags.swift; sourceTree = "<group>"; };
+		5A1A55B81DEAC93800D2124B /* BNHtmlPdfKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BNHtmlPdfKit.framework; path = "Pods/../build/Debug-iphoneos/BNHtmlPdfKit/BNHtmlPdfKit.framework"; sourceTree = "<group>"; };
+		5A1A55BA1DEB4D1200D2124B /* OptionsFormControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsFormControllerViewController.swift; sourceTree = "<group>"; };
+		5A1A55BC1DEB80F000D2124B /* StatusesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesController.swift; sourceTree = "<group>"; };
 		5A1C6D271DE4276C00CEF77E /* SignInOutThingy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignInOutThingy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1C6D2A1DE4276C00CEF77E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A1C6D2C1DE4276C00CEF77E /* RecordsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsController.swift; sourceTree = "<group>"; };
@@ -41,6 +51,10 @@
 		5A1C6D4A1DE4B72700CEF77E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5A1C6D4C1DE4B7BE00CEF77E /* EntryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryExtensions.swift; sourceTree = "<group>"; };
 		5A1C6D4E1DE4E57C00CEF77E /* SignInOutFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInOutFormController.swift; sourceTree = "<group>"; };
+		5A1F87001DE98AA300110FCD /* VisitorsFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsFormController.swift; sourceTree = "<group>"; };
+		5A4313B21DEA1D9A00839CD6 /* ArchiveViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewerController.swift; sourceTree = "<group>"; };
+		5A4313B41DEA34D400839CD6 /* modest.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = modest.css; sourceTree = "<group>"; };
+		5AE02C101DEA0CD100F6036F /* ArchivesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivesController.swift; sourceTree = "<group>"; };
 		7DF70BD97AA3ED5A31353011 /* Pods_SignInOutThingy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignInOutThingy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -49,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1A55B91DEAC93800D2124B /* BNHtmlPdfKit.framework in Frameworks */,
 				5A192F0F1DE6188E00D7D57E /* Eureka.framework in Frameworks */,
 				5A192F101DE6188E00D7D57E /* EZSwiftExtensions.framework in Frameworks */,
 				5A192F111DE6188E00D7D57E /* SwiftDate.framework in Frameworks */,
@@ -89,11 +104,17 @@
 		5A1C6D291DE4276C00CEF77E /* SignInOutThingy */ = {
 			isa = PBXGroup;
 			children = (
+				5A4313B41DEA34D400839CD6 /* modest.css */,
 				5A1C6D491DE4B72700CEF77E /* SignInOutThingy.xcdatamodeld */,
 				5A1C6D4C1DE4B7BE00CEF77E /* EntryExtensions.swift */,
 				5A1C6D2A1DE4276C00CEF77E /* AppDelegate.swift */,
 				5A1C6D2C1DE4276C00CEF77E /* RecordsController.swift */,
 				5A1C6D4E1DE4E57C00CEF77E /* SignInOutFormController.swift */,
+				5A1F87001DE98AA300110FCD /* VisitorsFormController.swift */,
+				5AE02C101DEA0CD100F6036F /* ArchivesController.swift */,
+				5A4313B21DEA1D9A00839CD6 /* ArchiveViewerController.swift */,
+				5A1A55BA1DEB4D1200D2124B /* OptionsFormControllerViewController.swift */,
+				5A1A55BC1DEB80F000D2124B /* StatusesController.swift */,
 				5A192F0A1DE5833200D7D57E /* CoreDataHelper.swift */,
 				5A192F121DE61D4900D7D57E /* FormTags.swift */,
 				5A1C6D2E1DE4276C00CEF77E /* Main.storyboard */,
@@ -107,6 +128,7 @@
 		88D9D21F3EE95CD0208FC281 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A1A55B81DEAC93800D2124B /* BNHtmlPdfKit.framework */,
 				5A192F0C1DE6188E00D7D57E /* Eureka.framework */,
 				5A192F0D1DE6188E00D7D57E /* EZSwiftExtensions.framework */,
 				5A192F0E1DE6188E00D7D57E /* SwiftDate.framework */,
@@ -179,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1C6D381DE4276C00CEF77E /* LaunchScreen.storyboard in Resources */,
+				5A4313B51DEA34D400839CD6 /* modest.css in Resources */,
 				5A1C6D351DE4276C00CEF77E /* Assets.xcassets in Resources */,
 				5A1C6D301DE4276C00CEF77E /* Main.storyboard in Resources */,
 			);
@@ -240,12 +263,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A192F0B1DE5833200D7D57E /* CoreDataHelper.swift in Sources */,
+				5AE02C111DEA0CD100F6036F /* ArchivesController.swift in Sources */,
+				5A1A55BB1DEB4D1200D2124B /* OptionsFormControllerViewController.swift in Sources */,
 				5A1C6D2D1DE4276C00CEF77E /* RecordsController.swift in Sources */,
+				5A1F87011DE98AA300110FCD /* VisitorsFormController.swift in Sources */,
+				5A4313B31DEA1D9A00839CD6 /* ArchiveViewerController.swift in Sources */,
 				5A1C6D2B1DE4276C00CEF77E /* AppDelegate.swift in Sources */,
 				5A1C6D4F1DE4E57C00CEF77E /* SignInOutFormController.swift in Sources */,
 				5A1C6D4D1DE4B7BE00CEF77E /* EntryExtensions.swift in Sources */,
 				5A192F131DE61D4900D7D57E /* FormTags.swift in Sources */,
 				5A1C6D4B1DE4B72700CEF77E /* SignInOutThingy.xcdatamodeld in Sources */,
+				5A1A55BD1DEB80F000D2124B /* StatusesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,8 +404,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftDate",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/BNHtmlPdfKit",
 				);
 				INFOPLIST_FILE = SignInOutThingy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SignInOutThingy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -395,8 +425,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftDate",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/BNHtmlPdfKit",
 				);
 				INFOPLIST_FILE = SignInOutThingy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SignInOutThingy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
