@@ -19,7 +19,7 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
         archiveName = "Archive: " + formatter.string(from: entries.first!.time1! as Date)
         var html = "<style>\(css)</style><div id=\"main\"><h3>\(archiveName!)</h3><hr>"
         for entry in entries {
-            html += "\(entry.description)<br>"
+            html += "\(entry.description)<hr>"
         }
         html += "</div>"
         webView.loadHTMLString(html, baseURL: nil)
