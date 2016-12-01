@@ -12,15 +12,15 @@ class OptionsFormController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ TextAreaRow(tagNameList) {
+        form +++ Section(header: "name list", footer: "Enter all the people's names, one name per line")
+        <<< TextAreaRow(tagNameList) {
             row in
-            row.placeholder = "Name List"
             row.value = UserDefaults.standard.string(forKey: tagNameList) ?? ""
         }
         
-        form +++ TextAreaRow(tagLocationList) {
+        form +++ Section(header: "location list", footer: "Enter all the preset locations, one location per line")
+        <<< TextAreaRow(tagLocationList) {
             row in
-            row.placeholder = "Location List"
             row.value = UserDefaults.standard.string(forKey: tagLocationList) ?? ""
         }
     }
