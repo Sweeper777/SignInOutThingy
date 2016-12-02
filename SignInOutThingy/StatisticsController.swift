@@ -9,6 +9,24 @@ class StatisticsController: UITableViewController {
     @IBOutlet var totalTimeBeingVisited: UILabel!
     @IBOutlet var forgotTimes: UILabel!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = person
+        if let entries = (CoreDataHelper.allEntries?.filter { $0.name == self.person }) {
+            let wentOutEntries = entries.filter { !$0.isVisitor }
+            if wentOutEntries.count == 1 {
+                wentOutTimes.text = "1 Time"
+            } else {
+                wentOutTimes.text = "\(wentOutEntries.count) Times"
+            }
+            
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.presentVC(alert)
+        }
+    }
 }
 
 func normalize(timeInterval: TimeInterval) -> String {
