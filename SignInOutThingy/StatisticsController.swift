@@ -21,6 +21,13 @@ class StatisticsController: UITableViewController {
                 wentOutTimes.text = "\(wentOutEntries.count) Times"
             }
             
+            let visitorEntries = entries.filter { $0.isVisitor }
+            if visitorEntries.count == 1 {
+                beingVisitedTimes.text = "1 Time"
+            } else {
+                beingVisitedTimes.text = "\(visitorEntries.count) Times"
+            }
+            
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
