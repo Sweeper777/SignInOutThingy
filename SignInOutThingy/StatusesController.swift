@@ -1,10 +1,12 @@
 import UIKit
 
 class StatusesController: UITableViewController {
-
+    var nameToPass: String?
+    
     let people = CoreDataHelper.nameList
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,10 +41,17 @@ class StatusesController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        nameToPass = people[indexPath.row]
+        performSegue(withIdentifier: "showStatistics", sender: self)
     }
  
     @IBAction func done(_ sender: Any) {
         dismissVC(completion: nil)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? StatisticsController {
+            vc.person = nameToPass
+        }
+    }
 }
