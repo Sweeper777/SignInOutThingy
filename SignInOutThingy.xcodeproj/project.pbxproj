@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A17ADDD1DF00FBE00EAF118 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17ADDC1DF00FBE00EAF118 /* StatisticsController.swift */; };
 		5A192F0B1DE5833200D7D57E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A192F0A1DE5833200D7D57E /* CoreDataHelper.swift */; };
 		5A192F0F1DE6188E00D7D57E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A192F0C1DE6188E00D7D57E /* Eureka.framework */; };
 		5A192F101DE6188E00D7D57E /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A192F0D1DE6188E00D7D57E /* EZSwiftExtensions.framework */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		05194AFA74D323CDAD97D78A /* Pods-SignInOutThingy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInOutThingy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignInOutThingy/Pods-SignInOutThingy.debug.xcconfig"; sourceTree = "<group>"; };
 		38F17448CD62548A5BC730A5 /* Pods-SignInOutThingy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInOutThingy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SignInOutThingy/Pods-SignInOutThingy.release.xcconfig"; sourceTree = "<group>"; };
+		5A17ADDC1DF00FBE00EAF118 /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
 		5A192F0A1DE5833200D7D57E /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		5A192F0C1DE6188E00D7D57E /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "../../Library/Developer/Xcode/DerivedData/SignInOutThingy-ccvhzzspbgrmcmfzhqwevuahzisc/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework"; sourceTree = "<group>"; };
 		5A192F0D1DE6188E00D7D57E /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = "../../Library/Developer/Xcode/DerivedData/SignInOutThingy-ccvhzzspbgrmcmfzhqwevuahzisc/Build/Products/Debug-iphonesimulator/EZSwiftExtensions/EZSwiftExtensions.framework"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				5A4313B21DEA1D9A00839CD6 /* ArchiveViewerController.swift */,
 				5A1A55BA1DEB4D1200D2124B /* OptionsFormControllerViewController.swift */,
 				5A1A55BC1DEB80F000D2124B /* StatusesController.swift */,
+				5A17ADDC1DF00FBE00EAF118 /* StatisticsController.swift */,
 				5A192F0A1DE5833200D7D57E /* CoreDataHelper.swift */,
 				5A192F121DE61D4900D7D57E /* FormTags.swift */,
 				5A1C6D2E1DE4276C00CEF77E /* Main.storyboard */,
@@ -268,6 +271,7 @@
 				5A1C6D2D1DE4276C00CEF77E /* RecordsController.swift in Sources */,
 				5A1F87011DE98AA300110FCD /* VisitorsFormController.swift in Sources */,
 				5A4313B31DEA1D9A00839CD6 /* ArchiveViewerController.swift in Sources */,
+				5A17ADDD1DF00FBE00EAF118 /* StatisticsController.swift in Sources */,
 				5A1C6D2B1DE4276C00CEF77E /* AppDelegate.swift in Sources */,
 				5A1C6D4F1DE4E57C00CEF77E /* SignInOutFormController.swift in Sources */,
 				5A1C6D4D1DE4B7BE00CEF77E /* EntryExtensions.swift in Sources */,
