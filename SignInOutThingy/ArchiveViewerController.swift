@@ -52,7 +52,7 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
 //        formatter.perPageContentInsets = UIEdgeInsets(top: 72, left: 72, bottom: 72, right: 72)
         printController.printingItem = pdf
         
-        (UIApplication.shared.delegate as! AppDelegate).window?.tintColor = UIColor.white
+        (UIApplication.shared.delegate as! AppDelegate).window?.tintColor = UIColor(hexString: "5abb5a")
         printController.present(animated: true, completionHandler: nil)
     }
     
