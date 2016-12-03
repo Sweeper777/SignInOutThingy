@@ -37,6 +37,22 @@ class StatisticsController: UITableViewController {
             }
             self.totalTimeOutisde.text = normalize(timeInterval: totalTimeOutside)
             
+            let totalTimeBeingVisited = visitorEntries.reduce(0) {
+                (interval: Double, entry: Entry) in
+                if entry.time2 == nil {
+                    return interval
+                }
+                return interval + entry.time2!.timeIntervalSince(entry.time1 as! Date) as Double
+            }
+            self.totalTimeBeingVisited.text = normalize(timeInterval: totalTimeBeingVisited)
+            
+            let forgortTimes = entries.filter { $0.time2 == nil && !($0.time1 as! Date).isToday }.count
+            
+            if forgortTimes == 1 {
+                self.forgotTimes.text = "1 Time"
+            } else {
+                self.forgotTimes.text = "\(forgortTimes) Times"
+            }
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
