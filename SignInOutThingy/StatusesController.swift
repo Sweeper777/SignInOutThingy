@@ -24,7 +24,7 @@ class StatusesController: UITableViewController {
         let personsEntries = CoreDataHelper.entriesToday.filter { $0.name == people[indexPath.row] }
         if let lastEntry = personsEntries.sorted(by: { ($0.0.time1 as! Date) < ($0.1.time1 as! Date) } ).last {
             if lastEntry.isComplete {
-                cell.detailTextLabel?.text = "Boarding House"
+                cell.detailTextLabel?.text = "In the Boarding House"
             } else if lastEntry.isVisitor {
                 cell.detailTextLabel?.text = "Being visited by \(lastEntry.secondaryItem!)"
             } else {
@@ -34,7 +34,7 @@ class StatusesController: UITableViewController {
                 cell.detailTextLabel?.text = "Went to \(lastEntry.secondaryItem!) at \(timeFormatter.string(from: lastEntry.time1 as! Date))"
             }
         } else {
-            cell.detailTextLabel?.text = "Boarding House"
+            cell.detailTextLabel?.text = "In the Boarding House"
         }
         return cell
     }
