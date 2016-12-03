@@ -28,6 +28,15 @@ class StatisticsController: UITableViewController {
                 beingVisitedTimes.text = "\(visitorEntries.count) Times"
             }
             
+            let totalTimeOutside = wentOutEntries.reduce(0) {
+                (interval: Double, entry: Entry) in
+                if entry.time2 == nil {
+                    return interval
+                }
+                return interval + entry.time2!.timeIntervalSince(entry.time1 as! Date) as Double
+            }
+            self.totalTimeOutisde.text = normalize(timeInterval: totalTimeOutside)
+            
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
