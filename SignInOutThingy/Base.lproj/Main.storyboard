@@ -66,19 +66,19 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Sign In/Out Records" id="RPh-TX-FHn">
                         <leftBarButtonItems>
-                            <barButtonItem title="Visitors" id="wxj-AS-f23">
+                            <barButtonItem image="visitor" id="wxj-AS-f23">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="visitorBtnPressed:" destination="r7G-l1-W1I" id="f7h-dV-PQ1"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Archives" id="S0A-Yw-xar">
+                            <barButtonItem image="archive" id="S0A-Yw-xar">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="archiveBtnPressed:" destination="r7G-l1-W1I" id="rV1-FQ-oTa"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="People" id="p4n-aA-Z8i">
+                            <barButtonItem image="people" id="p4n-aA-Z8i">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="statusesBtnPressed:" destination="r7G-l1-W1I" id="mLE-hV-0AC"/>
@@ -86,13 +86,13 @@
                             </barButtonItem>
                         </leftBarButtonItems>
                         <rightBarButtonItems>
-                            <barButtonItem title="Sign In/Out" id="sZy-wt-Ynv">
+                            <barButtonItem image="boarder" id="sZy-wt-Ynv">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="signInOutBtnPressedWithSender:" destination="r7G-l1-W1I" id="6Cd-yL-JOI"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Options" id="bvz-yZ-hfg">
+                            <barButtonItem image="options" id="bvz-yZ-hfg">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="optionsBtnPressed:" destination="r7G-l1-W1I" id="Pgc-cP-uvW"/>
@@ -216,13 +216,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VBx-nc-sKY">
                         <rightBarButtonItems>
-                            <barButtonItem title="Print" id="qOE-g2-NcZ">
+                            <barButtonItem image="print" id="qOE-g2-NcZ">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="print:" destination="ERH-5c-c7I" id="CSy-7y-QQ0"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Mail" id="oGJ-5H-deE">
+                            <barButtonItem image="mail" id="oGJ-5H-deE">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="mail:" destination="ERH-5c-c7I" id="bfp-od-RQv"/>
@@ -487,18 +487,18 @@
                                         <rect key="frame" x="0.0" y="35" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mVC-pF-YcD" id="Rbd-DW-Egr">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Went out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JR9-HJ-zA8">
-                                                    <rect key="frame" x="15" y="11" width="70" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="69.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hYg-Qc-sjc">
-                                                    <rect key="frame" x="481" y="11" width="44" height="21"/>
+                                                    <rect key="frame" x="481" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -511,18 +511,18 @@
                                         <rect key="frame" x="0.0" y="79" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="clA-ex-czu" id="Ov2-PB-qTP">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Being visited" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IwQ-Vq-uV3">
-                                                    <rect key="frame" x="15" y="11" width="98" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="98" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="560-1I-jsp">
-                                                    <rect key="frame" x="481" y="11" width="44" height="21"/>
+                                                    <rect key="frame" x="481" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -535,18 +535,18 @@
                                         <rect key="frame" x="0.0" y="123" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mOZ-tC-jYX" id="zO7-um-VOj">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Total time outside*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WTD-EK-OEm">
-                                                    <rect key="frame" x="15" y="11" width="161" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="144.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1U0-bi-nko">
-                                                    <rect key="frame" x="481" y="11" width="44" height="21"/>
+                                                    <rect key="frame" x="481" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -559,18 +559,18 @@
                                         <rect key="frame" x="0.0" y="167" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bEH-zt-5TZ" id="a4Y-8q-qrI">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Total time being visited*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IH5-RB-CfW">
-                                                    <rect key="frame" x="15" y="11" width="185" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="185" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Yy-pO-nf4">
-                                                    <rect key="frame" x="481" y="11" width="44" height="21"/>
+                                                    <rect key="frame" x="481" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -583,18 +583,18 @@
                                         <rect key="frame" x="0.0" y="211" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LP9-oP-SmP" id="r7e-Th-aKw">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Forgot to sign in/out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nLT-LI-WZh">
-                                                    <rect key="frame" x="15" y="11" width="155" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="154.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8z8-GR-aKz">
-                                                    <rect key="frame" x="481" y="11" width="44" height="21"/>
+                                                    <rect key="frame" x="481" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -624,4 +624,13 @@
             <point key="canvasLocation" x="2341" y="198"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="archive" width="25" height="25"/>
+        <image name="boarder" width="25" height="25"/>
+        <image name="mail" width="25" height="25"/>
+        <image name="options" width="25" height="25"/>
+        <image name="people" width="25" height="25"/>
+        <image name="print" width="25" height="25"/>
+        <image name="visitor" width="25" height="25"/>
+    </resources>
 </document>
