@@ -24,6 +24,7 @@
 		5A1C6D4B1DE4B72700CEF77E /* SignInOutThingy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C6D491DE4B72700CEF77E /* SignInOutThingy.xcdatamodeld */; };
 		5A1C6D4D1DE4B7BE00CEF77E /* EntryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C6D4C1DE4B7BE00CEF77E /* EntryExtensions.swift */; };
 		5A1C6D4F1DE4E57C00CEF77E /* SignInOutFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C6D4E1DE4E57C00CEF77E /* SignInOutFormController.swift */; };
+		5A1DB3091DF46C140061FAEB /* SwiftChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1DB3081DF46C140061FAEB /* SwiftChart.framework */; };
 		5A1F87011DE98AA300110FCD /* VisitorsFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F87001DE98AA300110FCD /* VisitorsFormController.swift */; };
 		5A4313B31DEA1D9A00839CD6 /* ArchiveViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4313B21DEA1D9A00839CD6 /* ArchiveViewerController.swift */; };
 		5A4313B51DEA34D400839CD6 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5A4313B41DEA34D400839CD6 /* modest.css */; };
@@ -53,6 +54,7 @@
 		5A1C6D4A1DE4B72700CEF77E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5A1C6D4C1DE4B7BE00CEF77E /* EntryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryExtensions.swift; sourceTree = "<group>"; };
 		5A1C6D4E1DE4E57C00CEF77E /* SignInOutFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInOutFormController.swift; sourceTree = "<group>"; };
+		5A1DB3081DF46C140061FAEB /* SwiftChart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftChart.framework; path = "Pods/../build/Debug-iphoneos/SwiftChart/SwiftChart.framework"; sourceTree = "<group>"; };
 		5A1F87001DE98AA300110FCD /* VisitorsFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsFormController.swift; sourceTree = "<group>"; };
 		5A4313B21DEA1D9A00839CD6 /* ArchiveViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewerController.swift; sourceTree = "<group>"; };
 		5A4313B41DEA34D400839CD6 /* modest.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = modest.css; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1DB3091DF46C140061FAEB /* SwiftChart.framework in Frameworks */,
 				5A1A55B91DEAC93800D2124B /* BNHtmlPdfKit.framework in Frameworks */,
 				5A192F0F1DE6188E00D7D57E /* Eureka.framework in Frameworks */,
 				5A192F101DE6188E00D7D57E /* EZSwiftExtensions.framework in Frameworks */,
@@ -131,6 +134,7 @@
 		88D9D21F3EE95CD0208FC281 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A1DB3081DF46C140061FAEB /* SwiftChart.framework */,
 				5A1A55B81DEAC93800D2124B /* BNHtmlPdfKit.framework */,
 				5A192F0C1DE6188E00D7D57E /* Eureka.framework */,
 				5A192F0D1DE6188E00D7D57E /* EZSwiftExtensions.framework */,
@@ -409,6 +413,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftDate",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/BNHtmlPdfKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftChart",
 				);
 				INFOPLIST_FILE = SignInOutThingy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -430,6 +435,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftDate",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/BNHtmlPdfKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftChart",
 				);
 				INFOPLIST_FILE = SignInOutThingy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

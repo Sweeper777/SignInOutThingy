@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '32B28B4028D630EC2D989F4925841E14'
-               BlueprintName = 'BNHtmlPdfKit'
+               BlueprintIdentifier = '9722FCDF831A4401E59EA311B5D4D3AF'
+               BlueprintName = 'SwiftChart'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'BNHtmlPdfKit.framework'>
+               BuildableName = 'SwiftChart.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

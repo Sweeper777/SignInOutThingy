@@ -9,5 +9,5 @@ target 'SignInOutThingy' do
   pod 'Eureka', '~> 2.0.0-beta.1'
   pod 'SwiftDate'
   pod 'BNHtmlPdfKit'
-
+  pod 'SwiftChart'
 end
