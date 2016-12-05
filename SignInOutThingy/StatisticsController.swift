@@ -71,6 +71,26 @@ class StatisticsController: UITableViewController {
                 let dataSeries = ChartSeries(groupedWentOutEntries.map { Float($0.totalTime) })
                 timeOutsideChart.add(dataSeries)
                 timeOutsideChart.minY = 0
+                timeOutsideChart.yLabelsFormatter = {
+                    index, value in
+                    let decimalFormatter = NumberFormatter()
+                    decimalFormatter.maximumFractionDigits = 2
+                    if value < 60 {
+                        return "\(Int(value)) sec"
+                    } else if value < 60 * 60 {
+                        return "\(decimalFormatter.string(from: (value / 60) as NSNumber)!) min"
+                    } else {
+                        return "\(decimalFormatter.string(from: (value / 60 / 60) as NSNumber)!) h"
+                    }
+                }
+                timeOutsideChart.xLabelsFormatter = {
+                    index, value in
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateStyle = .short
+                    dateFormatter.timeStyle = .none
+                    return dateFormatter.string(from: groupedWentOutEntries[index].date)
+                }
+            }
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
