@@ -56,6 +56,21 @@ class StatisticsController: UITableViewController {
             } else {
                 self.forgotTimes.text = "\(forgortTimes) Times"
             }
+            
+            var groupedWentOutEntries = [(date: Date, totalTime: TimeInterval)]()
+            for entry in (wentOutEntries.filter { $0.time2 != nil }) {
+                let indexOptional = groupedWentOutEntries.index(where: { $0.date.isTheSameDayAs(entry.time1! as Date) })
+                if let index = indexOptional {
+                    groupedWentOutEntries[index].totalTime += entry.time2!.timeIntervalSince(entry.time1! as Date)
+                } else {
+                    groupedWentOutEntries.append(((entry.time1 as! Date).ignoreTimeComponents(), entry.time2!.timeIntervalSince(entry.time1! as Date)))
+                }
+            }
+            
+            if groupedWentOutEntries.count > 0 {
+                let dataSeries = ChartSeries(groupedWentOutEntries.map { Float($0.totalTime) })
+                timeOutsideChart.add(dataSeries)
+                timeOutsideChart.minY = 0
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
