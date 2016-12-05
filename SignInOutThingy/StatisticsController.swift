@@ -1,4 +1,6 @@
 import UIKit
+import SwiftChart
+import SwiftDate
 
 class StatisticsController: UITableViewController {
     var person: String?
@@ -8,7 +10,8 @@ class StatisticsController: UITableViewController {
     @IBOutlet var totalTimeOutisde: UILabel!
     @IBOutlet var totalTimeBeingVisited: UILabel!
     @IBOutlet var forgotTimes: UILabel!
-    
+    @IBOutlet var timeOutsideChart: Chart!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
