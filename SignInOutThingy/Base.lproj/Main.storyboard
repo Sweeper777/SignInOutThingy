@@ -609,7 +609,7 @@
                             <tableViewSection headerTitle="Time outside every day*" footerTitle="* Not counting &quot;forgot to sign in/out&quot; entries" id="GUz-Ff-1iO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="308" id="x2q-nW-sNV">
-                                        <rect key="frame" x="0.0" y="319" width="540" height="308"/>
+                                        <rect key="frame" x="0.0" y="318.5" width="540" height="308"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x2q-nW-sNV" id="Nzu-Pm-L3l">
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="307"/>
@@ -641,7 +641,7 @@
                         <outlet property="forgotTimes" destination="8z8-GR-aKz" id="Brf-nv-nAI"/>
                         <outlet property="timeOutsideChart" destination="lPX-Cn-goB" id="5wM-L7-hGC"/>
                         <outlet property="totalTimeBeingVisited" destination="0Yy-pO-nf4" id="fzq-NI-75f"/>
-                        <outlet property="totalTimeOutisde" destination="1U0-bi-nko" id="QEy-Bw-62v"/>
+                        <outlet property="totalTimeOutside" destination="1U0-bi-nko" id="QtR-LQ-tb2"/>
                         <outlet property="wentOutTimes" destination="hYg-Qc-sjc" id="b2d-U7-vqu"/>
                     </connections>
                 </tableViewController>

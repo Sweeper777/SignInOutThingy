@@ -7,7 +7,7 @@ class StatisticsController: UITableViewController {
     
     @IBOutlet var wentOutTimes: UILabel!
     @IBOutlet var beingVisitedTimes: UILabel!
-    @IBOutlet var totalTimeOutisde: UILabel!
+    @IBOutlet var totalTimeOutside: UILabel!
     @IBOutlet var totalTimeBeingVisited: UILabel!
     @IBOutlet var forgotTimes: UILabel!
     @IBOutlet var timeOutsideChart: Chart!
@@ -38,7 +38,7 @@ class StatisticsController: UITableViewController {
                 }
                 return interval + entry.time2!.timeIntervalSince(entry.time1 as! Date) as Double
             }
-            self.totalTimeOutisde.text = normalize(timeInterval: totalTimeOutside)
+            self.totalTimeOutside.text = normalize(timeInterval: totalTimeOutside)
             
             let totalTimeBeingVisited = visitorEntries.reduce(0) {
                 (interval: Double, entry: Entry) in
@@ -49,12 +49,12 @@ class StatisticsController: UITableViewController {
             }
             self.totalTimeBeingVisited.text = normalize(timeInterval: totalTimeBeingVisited)
             
-            let forgortTimes = entries.filter { $0.time2 == nil && !($0.time1 as! Date).isToday }.count
+            let forgotTimes = entries.filter { $0.time2 == nil && !($0.time1 as! Date).isToday }.count
             
-            if forgortTimes == 1 {
+            if forgotTimes == 1 {
                 self.forgotTimes.text = "1 Time"
             } else {
-                self.forgotTimes.text = "\(forgortTimes) Times"
+                self.forgotTimes.text = "\(forgotTimes) Times"
             }
             
             var groupedWentOutEntries = [(date: Date, totalTime: TimeInterval)]()
