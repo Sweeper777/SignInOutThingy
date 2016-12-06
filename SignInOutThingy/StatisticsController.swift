@@ -11,7 +11,7 @@ class StatisticsController: UITableViewController {
     @IBOutlet var totalTimeBeingVisited: UILabel!
     @IBOutlet var forgotTimes: UILabel!
     @IBOutlet var timeOutsideChart: Chart!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,7 @@ class StatisticsController: UITableViewController {
                 }
             }
             
-            if groupedWentOutEntries.count > 0 {
+            if groupedWentOutEntries.count > 1 {
                 func getHumanReadableTime(timeInterval: TimeInterval) -> String {
                     let decimalFormatter = NumberFormatter()
                     decimalFormatter.maximumFractionDigits = 2
