@@ -68,20 +68,27 @@ class StatisticsController: UITableViewController {
             }
             
             if groupedWentOutEntries.count > 0 {
+                func getHumanReadableTime(timeInterval: TimeInterval) -> String {
+                    let decimalFormatter = NumberFormatter()
+                    decimalFormatter.maximumFractionDigits = 2
+                    if timeInterval == 0 {
+                        return "0"
+                    }
+                    if timeInterval < 60 {
+                        return "\(Int(timeInterval)) sec"
+                    } else if timeInterval < 60 * 60 {
+                        return "\(decimalFormatter.string(from: (timeInterval / 60) as NSNumber)!) min"
+                    } else {
+                        return "\(decimalFormatter.string(from: (timeInterval / 60 / 60) as NSNumber)!) h"
+                    }
+                }
+                
                 let dataSeries = ChartSeries(groupedWentOutEntries.map { Float($0.totalTime) })
                 timeOutsideChart.add(dataSeries)
                 timeOutsideChart.minY = 0
                 timeOutsideChart.yLabelsFormatter = {
                     index, value in
-                    let decimalFormatter = NumberFormatter()
-                    decimalFormatter.maximumFractionDigits = 2
-                    if value < 60 {
-                        return "\(Int(value)) sec"
-                    } else if value < 60 * 60 {
-                        return "\(decimalFormatter.string(from: (value / 60) as NSNumber)!) min"
-                    } else {
-                        return "\(decimalFormatter.string(from: (value / 60 / 60) as NSNumber)!) h"
-                    }
+                    return getHumanReadableTime(timeInterval: TimeInterval(value))
                 }
                 timeOutsideChart.xLabelsFormatter = {
                     index, value in
