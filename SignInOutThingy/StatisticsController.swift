@@ -90,6 +90,10 @@ class StatisticsController: UITableViewController {
                     index, value in
                     return getHumanReadableTime(timeInterval: TimeInterval(value))
                 }
+                
+                let max = groupedWentOutEntries.map { $0.totalTime }.max()!
+                timeOutsideChart.yLabels = getYValues(max: max)
+                
                 timeOutsideChart.xLabelsFormatter = {
                     index, value in
                     let dateFormatter = DateFormatter()
@@ -103,6 +107,19 @@ class StatisticsController: UITableViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.presentVC(alert)
         }
+    }
+    
+    func getYValues(max: TimeInterval) -> [Float] {
+        if max < 60 {
+            return [0, 10, 20, 30, 40, 50, 60]
+        }
+        
+        if max < 60 * 60 {
+            return [0, 600, 1200, 1800, 2400, 3000, 3600]
+        }
+        
+        let hours = ceil(max / 60 / 60)
+        return Array(stride(from: 0.0, through: Float(hours) * 60 * 60, by: Float(hours * 60 * 60 / 10)))
     }
 }
 
