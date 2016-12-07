@@ -84,6 +84,7 @@ class StatisticsController: UITableViewController {
                 }
                 
                 let dataSeries = ChartSeries(groupedWentOutEntries.map { Float($0.totalTime) })
+                dataSeries.area = true
                 timeOutsideChart.add(dataSeries)
                 timeOutsideChart.minY = 0
                 timeOutsideChart.yLabelsFormatter = {
