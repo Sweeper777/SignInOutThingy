@@ -101,6 +101,8 @@ class StatisticsController: UITableViewController {
                     dateFormatter.timeStyle = .none
                     return dateFormatter.string(from: groupedWentOutEntries[index].date)
                 }
+                
+                timeOutsideChart.xLabels = Array(stride(from: 0.0, through: Float(groupedWentOutEntries.count), by: 1))
             }
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
