@@ -117,6 +117,10 @@ class StatisticsController: UITableViewController {
             return [0, 10, 20, 30, 40, 50, 60]
         }
         
+        if max < 60 * 30 {
+            return stride(from: 0, through: 30, by: 3).map { $0 * 60 }
+        }
+        
         if max < 60 * 60 {
             return [0, 600, 1200, 1800, 2400, 3000, 3600]
         }
