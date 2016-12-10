@@ -2,7 +2,7 @@ import UIKit
 import SwiftChart
 import SwiftDate
 
-class StatisticsController: UITableViewController {
+class StatisticsController: UITableViewController, ChartDelegate {
     var person: String?
     
     @IBOutlet var wentOutTimes: UILabel!
@@ -17,6 +17,7 @@ class StatisticsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = person
+        label.isHidden = true
         if let entries = (CoreDataHelper.allEntries?.filter { $0.name == self.person }) {
             let wentOutEntries = entries.filter { !$0.isVisitor }
             if wentOutEntries.count == 1 {
@@ -69,6 +70,7 @@ class StatisticsController: UITableViewController {
             }
             
             if groupedWentOutEntries.count > 1 {
+                timeOutsideChart.delegate = self
                 
                 let dataSeries = ChartSeries(groupedWentOutEntries.map { Float($0.totalTime) })
                 dataSeries.area = true
@@ -130,6 +132,38 @@ class StatisticsController: UITableViewController {
             return "\(decimalFormatter.string(from: (timeInterval / 60 / 60) as NSNumber)!) h"
         }
     }
+    
+    func didTouchChart(_ chart: Chart, indexes: Array<Int?>, x: Float, left: CGFloat) {
+        
+        if let value = chart.valueForSeries(0, atIndex: indexes[0]) {
+            label.isHidden = false
+            let labelLeadingMarginInitialConstant = CGFloat(0)
+            label.text = getHumanReadableTime(timeInterval: TimeInterval(value))
+            
+            // Align the label to the touch left position, centered
+            var constant = labelLeadingMarginInitialConstant + left - (label.frame.width / 2)
+            
+            // Avoid placing the label on the left of the chart
+            if constant < labelLeadingMarginInitialConstant {
+                constant = labelLeadingMarginInitialConstant
+            }
+            
+            // Avoid placing the label on the right of the chart
+            let rightMargin = chart.frame.width - label.frame.width
+            if constant > rightMargin {
+                constant = rightMargin
+            }
+            
+            labelLeadingMarginConstraint.constant = constant
+            
+        }
+        
+    }
+    
+    func didFinishTouchingChart(_ chart: Chart) {
+        label.isHidden = true
+    }
+
 }
 
 func normalize(timeInterval: TimeInterval) -> String {
