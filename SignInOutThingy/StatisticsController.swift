@@ -11,7 +11,8 @@ class StatisticsController: UITableViewController {
     @IBOutlet var totalTimeBeingVisited: UILabel!
     @IBOutlet var forgotTimes: UILabel!
     @IBOutlet var timeOutsideChart: Chart!
-    
+    @IBOutlet var label: UILabel!
+    @IBOutlet var labelLeadingMarginConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()

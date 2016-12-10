@@ -612,19 +612,27 @@
                                         <rect key="frame" x="0.0" y="318.5" width="1024" height="308"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x2q-nW-sNV" id="Nzu-Pm-L3l">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="307.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="308"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPX-Cn-goB" customClass="Chart" customModule="SwiftChart">
                                                     <rect key="frame" x="8" y="44" width="965" height="255"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijr-Vl-XOI">
+                                                    <rect key="frame" x="143" y="29" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lPX-Cn-goB" secondAttribute="trailing" constant="43" id="Ehp-WI-8X3"/>
                                                 <constraint firstItem="lPX-Cn-goB" firstAttribute="leading" secondItem="Nzu-Pm-L3l" secondAttribute="leadingMargin" id="UB5-in-OuK"/>
                                                 <constraint firstItem="lPX-Cn-goB" firstAttribute="bottom" secondItem="Nzu-Pm-L3l" secondAttribute="bottomMargin" id="WCN-ov-zNp"/>
+                                                <constraint firstItem="ijr-Vl-XOI" firstAttribute="top" secondItem="Nzu-Pm-L3l" secondAttribute="topMargin" constant="21" id="ZVG-mx-xUm"/>
                                                 <constraint firstItem="lPX-Cn-goB" firstAttribute="top" secondItem="Nzu-Pm-L3l" secondAttribute="topMargin" constant="36" id="lFd-v3-dbX"/>
+                                                <constraint firstItem="ijr-Vl-XOI" firstAttribute="leading" secondItem="Nzu-Pm-L3l" secondAttribute="leading" constant="143" id="nhZ-MI-jVT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -639,6 +647,8 @@
                     <connections>
                         <outlet property="beingVisitedTimes" destination="560-1I-jsp" id="a5q-77-ZYS"/>
                         <outlet property="forgotTimes" destination="8z8-GR-aKz" id="Brf-nv-nAI"/>
+                        <outlet property="label" destination="ijr-Vl-XOI" id="YjN-r7-Sgq"/>
+                        <outlet property="labelLeadingMarginConstraint" destination="nhZ-MI-jVT" id="A9R-0k-m1P"/>
                         <outlet property="timeOutsideChart" destination="lPX-Cn-goB" id="5wM-L7-hGC"/>
                         <outlet property="totalTimeBeingVisited" destination="0Yy-pO-nf4" id="fzq-NI-75f"/>
                         <outlet property="totalTimeOutside" destination="1U0-bi-nko" id="QtR-LQ-tb2"/>
@@ -647,7 +657,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ceu-fi-SbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2340.8203125" y="197.65625"/>
+            <point key="canvasLocation" x="2968" y="198"/>
         </scene>
     </scenes>
     <resources>
