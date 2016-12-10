@@ -69,20 +69,6 @@ class StatisticsController: UITableViewController {
             }
             
             if groupedWentOutEntries.count > 1 {
-                func getHumanReadableTime(timeInterval: TimeInterval) -> String {
-                    let decimalFormatter = NumberFormatter()
-                    decimalFormatter.maximumFractionDigits = 2
-                    if timeInterval == 0 {
-                        return "0"
-                    }
-                    if timeInterval < 60 {
-                        return "\(Int(timeInterval)) sec"
-                    } else if timeInterval < 60 * 60 {
-                        return "\(decimalFormatter.string(from: (timeInterval / 60) as NSNumber)!) min"
-                    } else {
-                        return "\(decimalFormatter.string(from: (timeInterval / 60 / 60) as NSNumber)!) h"
-                    }
-                }
                 
                 let dataSeries = ChartSeries(groupedWentOutEntries.map { Float($0.totalTime) })
                 dataSeries.area = true
@@ -90,7 +76,7 @@ class StatisticsController: UITableViewController {
                 timeOutsideChart.minY = 0
                 timeOutsideChart.yLabelsFormatter = {
                     index, value in
-                    return getHumanReadableTime(timeInterval: TimeInterval(value))
+                    return self.getHumanReadableTime(timeInterval: TimeInterval(value))
                 }
                 
                 let max = groupedWentOutEntries.map { $0.totalTime }.max()!
@@ -128,6 +114,21 @@ class StatisticsController: UITableViewController {
         
         let hours = ceil(max / 60 / 60)
         return Array(stride(from: 0.0, through: Float(hours) * 60 * 60, by: Float(hours * 60 * 60 / 10)))
+    }
+    
+    func getHumanReadableTime(timeInterval: TimeInterval) -> String {
+        let decimalFormatter = NumberFormatter()
+        decimalFormatter.maximumFractionDigits = 2
+        if timeInterval == 0 {
+            return "0"
+        }
+        if timeInterval < 60 {
+            return "\(Int(timeInterval)) sec"
+        } else if timeInterval < 60 * 60 {
+            return "\(decimalFormatter.string(from: (timeInterval / 60) as NSNumber)!) min"
+        } else {
+            return "\(decimalFormatter.string(from: (timeInterval / 60 / 60) as NSNumber)!) h"
+        }
     }
 }
 
