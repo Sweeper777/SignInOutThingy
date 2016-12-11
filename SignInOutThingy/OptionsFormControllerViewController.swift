@@ -6,7 +6,7 @@ class OptionsFormController: FormViewController {
         let values = form.values()
         UserDefaults.standard.set(values[tagNameList]!, forKey: tagNameList)
         UserDefaults.standard.set(values[tagLocationList]!, forKey: tagLocationList)
-        UserDefaults.standard.set(values[tagOnlyShowCompletedEntries]!, forKey: tagOnlyShowCompletedEntries)
+        UserDefaults.standard.set(values[tagOnlyShowIncompleteEntries]!, forKey: tagOnlyShowIncompleteEntries)
         performSegue(withIdentifier: "unwindFromOptions", sender: self)
     }
 
@@ -27,10 +27,10 @@ class OptionsFormController: FormViewController {
             row.cell.height = { 200 }
         }
         
-        form +++ SwitchRow(tagOnlyShowCompletedEntries) {
+        form +++ SwitchRow(tagOnlyShowIncompleteEntries) {
             row in
-            row.title = "Only Show Completed Entries"
-            row.value = UserDefaults.standard.bool(forKey: tagOnlyShowCompletedEntries)
+            row.title = "Only Show Incomplete Entries"
+            row.value = UserDefaults.standard.bool(forKey: tagOnlyShowIncompleteEntries)
             }
     }
 
