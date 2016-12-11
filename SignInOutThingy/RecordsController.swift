@@ -6,6 +6,9 @@ class RecordsController: UITableViewController {
     override func viewDidLoad() {
         if let entries = CoreDataHelper.entriesToday {
             self.entries = entries
+            if UserDefaults.standard.bool(forKey: tagOnlyShowCompletedEntries) {
+                self.entries = self.entries?.filter { $0.isComplete }
+            }
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to get records.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -36,6 +39,9 @@ class RecordsController: UITableViewController {
     @IBAction func unwindFromSignInOut(segue: UIStoryboardSegue) {
         CoreDataHelper.updateData()
         self.entries = CoreDataHelper.entriesToday
+        if UserDefaults.standard.bool(forKey: tagOnlyShowCompletedEntries) {
+            self.entries = self.entries?.filter { $0.isComplete }
+        }
         tableView.reloadData()
     }
     
