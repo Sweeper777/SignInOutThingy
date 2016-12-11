@@ -25,6 +25,12 @@ class OptionsFormController: FormViewController {
             row.value = UserDefaults.standard.string(forKey: tagLocationList) ?? ""
             row.cell.height = { 200 }
         }
+        
+        form +++ SwitchRow(tagOnlyShowCompletedEntries) {
+            row in
+            row.title = "Only Show Completed Entries"
+            row.value = UserDefaults.standard.bool(forKey: tagOnlyShowCompletedEntries)
+            }
     }
 
 }
