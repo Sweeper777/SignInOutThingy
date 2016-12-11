@@ -6,6 +6,7 @@ class OptionsFormController: FormViewController {
         let values = form.values()
         UserDefaults.standard.set(values[tagNameList]!, forKey: tagNameList)
         UserDefaults.standard.set(values[tagLocationList]!, forKey: tagLocationList)
+        UserDefaults.standard.set(values[tagOnlyShowCompletedEntries]!, forKey: tagOnlyShowCompletedEntries)
         dismissVC(completion: nil)
     }
 
@@ -30,10 +31,7 @@ class OptionsFormController: FormViewController {
             row in
             row.title = "Only Show Completed Entries"
             row.value = UserDefaults.standard.bool(forKey: tagOnlyShowCompletedEntries)
-            }.onChange {
-                row in
-                UserDefaults.standard.set(row.value!, forKey: tagOnlyShowCompletedEntries)
-        }
+            }
     }
 
 }
