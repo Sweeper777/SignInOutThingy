@@ -30,7 +30,10 @@ class OptionsFormController: FormViewController {
             row in
             row.title = "Only Show Completed Entries"
             row.value = UserDefaults.standard.bool(forKey: tagOnlyShowCompletedEntries)
-            }
+            }.onChange {
+                row in
+                UserDefaults.standard.set(row.value!, forKey: tagOnlyShowCompletedEntries)
+        }
     }
 
 }
