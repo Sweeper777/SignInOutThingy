@@ -7,7 +7,7 @@ class OptionsFormController: FormViewController {
         UserDefaults.standard.set(values[tagNameList]!, forKey: tagNameList)
         UserDefaults.standard.set(values[tagLocationList]!, forKey: tagLocationList)
         UserDefaults.standard.set(values[tagOnlyShowCompletedEntries]!, forKey: tagOnlyShowCompletedEntries)
-        dismissVC(completion: nil)
+        performSegue(withIdentifier: "unwindFromOptions", sender: self)
     }
 
     override func viewDidLoad() {

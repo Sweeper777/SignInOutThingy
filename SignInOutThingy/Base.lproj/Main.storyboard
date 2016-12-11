@@ -393,6 +393,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BiJ-kb-Qw1" kind="unwind" identifier="unwindFromOptions" unwindAction="unwindFromSignInOutWithSegue:" id="e56-Gc-tLl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0H-8I-akd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -612,7 +615,7 @@
                                         <rect key="frame" x="0.0" y="318.5" width="1024" height="308"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x2q-nW-sNV" id="Nzu-Pm-L3l">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="308"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="307.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPX-Cn-goB" customClass="Chart" customModule="SwiftChart">
