@@ -703,6 +703,8 @@ open class Chart: UIControl {
 
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         handleTouchEvents(touches, event: event)
+        drawHighlightLineFromLeftPosition(-1)
+        delegate?.didFinishTouchingChart(self)
     }
 
     override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
