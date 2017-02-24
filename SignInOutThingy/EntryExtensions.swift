@@ -20,7 +20,7 @@ extension Entry {
             if let time2 = self.time2 {
                 returnValue += " and returned at \(timeFormatter.string(from: time2 as Date))"
             } else if !(time1 as! Date).isToday {
-                returnValue += " <b>and forgot to sign in</b>"
+                returnValue += " <b><span style=\"color: #ff0000\">and forgot to sign in</span></b>"
             }
             
             return returnValue
@@ -29,7 +29,7 @@ extension Entry {
             if let time2 = self.time2 {
                 returnValue += " and left at \(timeFormatter.string(from: time2 as Date))"
             } else if !(time1 as! Date).isToday {
-                returnValue += " <b>and forgot to sign out</b>"
+                returnValue += " <b><span style=\"color: #ff0000\">and forgot to sign out</span></b>"
             }
             
             return returnValue
