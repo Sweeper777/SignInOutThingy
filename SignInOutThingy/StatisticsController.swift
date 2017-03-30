@@ -1,6 +1,5 @@
 import UIKit
 import SwiftChart
-import SwiftDate
 
 class StatisticsController: UITableViewController, ChartDelegate {
     var person: String?
