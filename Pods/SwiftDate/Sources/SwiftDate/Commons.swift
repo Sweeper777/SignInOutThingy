@@ -24,6 +24,26 @@
 
 import Foundation
 
+
+/// This define the weekdays
+///
+/// - sunday: sunday
+/// - monday: monday
+/// - tuesday: tuesday
+/// - wednesday: wednesday
+/// - thursday: thursday
+/// - friday: friday
+/// - saturday: saturday
+public enum WeekDay: Int {
+	case sunday		= 1
+	case monday		= 2
+	case tuesday	= 3
+	case wednesday	= 4
+	case thursday	= 5
+	case friday		= 6
+	case saturday	= 7
+}
+
 /// Provide a mechanism to create and return local-thread object you can share.
 /// 
 /// Basically you assign a key to the object and return the initializated instance in `create`
@@ -62,18 +82,24 @@ public enum DateError: Error {
 	case DifferentCalendar
 	case MissingRsrcBundle
 	case FailedToSetComponent(Calendar.Component)
+	case InvalidLocalizationFile
 }
 
 
 /// Available date formats used to parse strings and format date into string
 ///
-/// - custom:   custom format expressed in Unicode tr35-31 (see http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns and Apple's Date Formatting Guide)
+/// - custom:   custom format expressed in Unicode tr35-31 (see http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns and Apple's Date Formatting Guide). Formatter uses heuristics to guess the date if it's invalid.
+///				This may end in a wrong parsed date. Use `strict` to disable heuristics parsing.
+/// - strict:	strict format is like custom but does not apply heuristics to guess at the date which is intended by the string.
+///				So, if you pass an invalid date (like 1999-02-31) formatter fails instead of returning guessing date (in our case
+///				1999-03-03).
 /// - iso8601:  iso8601 date format (see https://en.wikipedia.org/wiki/ISO_8601)
 /// - extended: extended date format ("eee dd-MMM-yyyy GG HH:mm:ss.SSS zzz")
 /// - rss:      RSS and AltRSS date format
 /// - dotNET:   .NET date format
 public enum DateFormat {
 	case custom(String)
+	case strict(String)
 	case iso8601(options: ISO8601DateTimeFormatter.Options)
 	case extended
 	case rss(alt: Bool)
