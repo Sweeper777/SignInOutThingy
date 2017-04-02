@@ -10,7 +10,6 @@
 		5A17ADDD1DF00FBE00EAF118 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17ADDC1DF00FBE00EAF118 /* StatisticsController.swift */; };
 		5A192F0B1DE5833200D7D57E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A192F0A1DE5833200D7D57E /* CoreDataHelper.swift */; };
 		5A192F0F1DE6188E00D7D57E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A192F0C1DE6188E00D7D57E /* Eureka.framework */; };
-		5A192F101DE6188E00D7D57E /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A192F0D1DE6188E00D7D57E /* EZSwiftExtensions.framework */; };
 		5A192F111DE6188E00D7D57E /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A192F0E1DE6188E00D7D57E /* SwiftDate.framework */; };
 		5A192F131DE61D4900D7D57E /* FormTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A192F121DE61D4900D7D57E /* FormTags.swift */; };
 		5A1A55B91DEAC93800D2124B /* BNHtmlPdfKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1A55B81DEAC93800D2124B /* BNHtmlPdfKit.framework */; };
@@ -70,7 +69,6 @@
 				5A1DB3091DF46C140061FAEB /* SwiftChart.framework in Frameworks */,
 				5A1A55B91DEAC93800D2124B /* BNHtmlPdfKit.framework in Frameworks */,
 				5A192F0F1DE6188E00D7D57E /* Eureka.framework in Frameworks */,
-				5A192F101DE6188E00D7D57E /* EZSwiftExtensions.framework in Frameworks */,
 				5A192F111DE6188E00D7D57E /* SwiftDate.framework in Frameworks */,
 				EBECFC1F3E53A5CE61B73DB7 /* Pods_SignInOutThingy.framework in Frameworks */,
 			);
@@ -174,7 +172,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Mulang Su";
 				TargetAttributes = {
 					5A1C6D261DE4276C00CEF77E = {

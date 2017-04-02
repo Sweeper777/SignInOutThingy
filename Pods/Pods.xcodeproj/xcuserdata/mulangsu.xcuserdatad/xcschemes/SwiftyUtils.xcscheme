@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '32B28B4028D630EC2D989F4925841E14'
-               BlueprintName = 'BNHtmlPdfKit'
+               BlueprintIdentifier = '05122CBE55548EB3D092CDDF3462089D'
+               BlueprintName = 'SwiftyUtils'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'BNHtmlPdfKit.framework'>
+               BuildableName = 'SwiftyUtils.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

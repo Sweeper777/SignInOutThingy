@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>EZSwiftExtensions.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Eureka.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,9 +29,24 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>05122CBE55548EB3D092CDDF3462089D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B262DAA25DBECC67B167FE58812FB64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>32B28B4028D630EC2D989F4925841E14</key>
 		<dict>
 			<key>primary</key>
@@ -47,22 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37BBF5E6E49B21AEDBBBE929007D58EB</key>
+		<key>559BF4ACEA62B3F7D0B7F4D837122021</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9722FCDF831A4401E59EA311B5D4D3AF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D8AB9D2A7E3BD6F9B00BDF9EBF90BA98</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F1C07B5AF990C01D64068CBEEE677DA3</key>
+		<key>ABFF25E37422BEDEEE9C3E3245CF162D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
