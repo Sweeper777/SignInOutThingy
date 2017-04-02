@@ -1,7 +1,7 @@
 import UIKit
 import BNHtmlPdfKit
 import MessageUI
-import EZSwiftExtensions
+import SwiftyUtils
 
 class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailComposeViewControllerDelegate, UIPrintInteractionControllerDelegate {
     var entries: [Entry]!
@@ -35,7 +35,7 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
         guard let pdf = self.pdf else {
             let alert = UIAlertController(title: "Error", message: "The PDF file is still being generated. Please wait.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.presentVC(alert)
+            self.present(alert, animated: true)
             return
         }
         
@@ -52,7 +52,7 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
 //        formatter.perPageContentInsets = UIEdgeInsets(top: 72, left: 72, bottom: 72, right: 72)
         printController.printingItem = pdf
         
-        (UIApplication.shared.delegate as! AppDelegate).window?.tintColor = UIColor(hexString: "5abb5a")
+        (UIApplication.shared.delegate as! AppDelegate).window?.tintColor = UIColor(hex: "5abb5a")
         printController.present(animated: true, completionHandler: nil)
     }
     
@@ -60,7 +60,7 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
         guard let pdf = self.pdf else {
             let alert = UIAlertController(title: "Error", message: "The PDF file is still being generated. Please wait.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.presentVC(alert)
+            self.present(alert, animated: true)
             return
         }
         
@@ -69,11 +69,11 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
             mailComposer.mailComposeDelegate = self
             mailComposer.modalPresentationStyle = .formSheet
             mailComposer.addAttachmentData(pdf, mimeType: "application/pdf", fileName: archiveName)
-            self.presentVC(mailComposer)
+            self.present(mailComposer, animated: true)
         } else {
             let alert = UIAlertController(title: "Error", message: "Your mail accounts might not be set up.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.presentVC(alert)
+            self.present(alert, animated: true)
         }
     }
     
@@ -82,11 +82,11 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismissVC(completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
     
     func printInteractionControllerDidDismissPrinterOptions(_ printInteractionController: UIPrintInteractionController) {
-        (UIApplication.shared.delegate as! AppDelegate).window?.tintColor = UIColor(hexString: "3b7b3b")
+        (UIApplication.shared.delegate as! AppDelegate).window?.tintColor = UIColor(hex: "3b7b3b")
     }
     
 }

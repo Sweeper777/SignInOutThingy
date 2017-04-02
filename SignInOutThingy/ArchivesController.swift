@@ -20,7 +20,7 @@ class ArchivesController: UITableViewController {
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to retrieve archives", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.presentVC(alert)
+            self.present(alert, animated: true)
         }
     }
 

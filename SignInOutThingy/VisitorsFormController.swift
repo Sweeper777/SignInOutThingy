@@ -30,7 +30,7 @@ class VisitorsFormController: FormViewController {
         //        var presenceDict = [String: Bool]()
         for person in people {
             var temp = CoreDataHelper.hasPersonCompletedEntry(person: person, isVisitor: true)
-            temp?.toggle()
+            temp = temp == nil ? nil : !temp!
             let visiting = temp
             form.allSections.last! <<< CheckRow("\(tagPerson)_\(person)") {
                 row in
@@ -64,7 +64,7 @@ class VisitorsFormController: FormViewController {
         func showErrorMessage(_ msg: String) {
             let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.presentVC(alert)
+            self.present(alert, animated: true)
         }
         
         let values = form.values(includeHidden: false)

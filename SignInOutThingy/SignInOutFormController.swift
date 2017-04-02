@@ -75,7 +75,7 @@ class SignInOutFormController: FormViewController {
         func showErrorMessage(_ msg: String) {
             let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.presentVC(alert)
+            self.present(alert, animated: true)
         }
         
         let values = form.values(includeHidden: false)

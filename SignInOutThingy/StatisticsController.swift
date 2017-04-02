@@ -1,5 +1,6 @@
 import UIKit
 import SwiftChart
+import SwiftDate
 
 class StatisticsController: UITableViewController, ChartDelegate {
     var person: String?
@@ -96,7 +97,7 @@ class StatisticsController: UITableViewController, ChartDelegate {
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.presentVC(alert)
+            self.present(alert, animated: true)
         }
     }
     

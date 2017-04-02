@@ -1,6 +1,5 @@
 import UIKit
 import CoreData
-import EZSwiftExtensions
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UINavigationBar.appearance().barStyle = .black
-        window?.tintColor = UIColor(hexString: "3b7b3b")
+        window?.tintColor = UIColor(hex: "3b7b3b")
         return true
     }
 

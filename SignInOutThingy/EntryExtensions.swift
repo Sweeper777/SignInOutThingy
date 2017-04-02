@@ -1,4 +1,5 @@
 import CoreData
+import SwiftDate
 
 extension Entry {
     convenience init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?, name: String, secondaryItem: String) {

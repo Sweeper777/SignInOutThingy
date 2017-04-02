@@ -12,7 +12,7 @@ class RecordsController: UITableViewController {
         } else {
             let alert = UIAlertController(title: "Error", message: "Failed to get records.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.presentVC(alert)
+            self.present(alert, animated: true)
         }
     }
     

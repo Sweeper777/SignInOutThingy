@@ -45,22 +45,20 @@ class CoreDataHelper {
     }
     
     static var locationList: [String] {
-        return (UserDefaults.standard.string(forKey: tagLocationList) ?? "").split("\n").filter { $0.trimmed() != "" }.sorted()
+        return (UserDefaults.standard.string(forKey: tagLocationList) ?? "").components(separatedBy: "\n").filter { $0.trimmed() != "" }.sorted()
     }
     
     static var nameList: [String] {
-        return (UserDefaults.standard.string(forKey: tagNameList) ?? "").split("\n").filter { $0.trimmed() != "" }.sorted()
+        return (UserDefaults.standard.string(forKey: tagNameList) ?? "").components(separatedBy: "\n").filter { $0.trimmed() != "" }.sorted()
     }
 }
 
 extension Date {
     func isTheSameDayAs(_ other: Date) -> Bool {
-        return self.day == other.day &&
-            self.month == other.month &&
-            self.year == other.year
+        return self.date == other.date
     }
     
     func ignoreTimeComponents() -> Date {
-        return try! self.atTime(hour: 0, minute: 0, second: 0)
+        return self.date
     }
 }
