@@ -87,8 +87,7 @@ class StatisticsController: UITableViewController, ChartDelegate {
                 timeOutsideChart.xLabelsFormatter = {
                     index, value in
                     let dateFormatter = DateFormatter()
-                    dateFormatter.dateStyle = .short
-                    dateFormatter.timeStyle = .none
+                    dateFormatter.dateFormat = "dd/MM"
                     return dateFormatter.string(from: groupedWentOutEntries[index].date)
                 }
                 
