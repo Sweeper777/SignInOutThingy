@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SCLAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftChart.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05122CBE55548EB3D092CDDF3462089D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2B262DAA25DBECC67B167FE58812FB64</key>
+		<key>11F561D7F4C8D56DBCC3536A3E9EBA8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>559BF4ACEA62B3F7D0B7F4D837122021</key>
+		<key>4DCA2E52162D8E3B37B22671E86BB53A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABFF25E37422BEDEEE9C3E3245CF162D</key>
+		<key>7B500F2EFB49C232AF94E3F6A3F62787</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA7F54938F7ED3F160FF67284D14E7EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8AD5A87499243F7E54785EDE5A1CFB6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

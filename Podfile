@@ -10,4 +10,5 @@ target 'SignInOutThingy' do
   pod 'SwiftDate'
   pod 'BNHtmlPdfKit'
   pod 'SwiftChart'
+  pod 'SCLAlertView'
 end

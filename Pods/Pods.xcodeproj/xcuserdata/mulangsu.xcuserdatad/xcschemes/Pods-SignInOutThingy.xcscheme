@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "559BF4ACEA62B3F7D0B7F4D837122021"
+               BlueprintIdentifier = "EA7F54938F7ED3F160FF67284D14E7EF"
                BuildableName = "Pods_SignInOutThingy.framework"
                BlueprintName = "Pods-SignInOutThingy"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "559BF4ACEA62B3F7D0B7F4D837122021"
+            BlueprintIdentifier = "EA7F54938F7ED3F160FF67284D14E7EF"
             BuildableName = "Pods_SignInOutThingy.framework"
             BlueprintName = "Pods-SignInOutThingy"
             ReferencedContainer = "container:Pods.xcodeproj">
