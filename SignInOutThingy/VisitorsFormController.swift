@@ -1,5 +1,6 @@
 import Eureka
 import CoreData
+import SCLAlertView
 
 class VisitorsFormController: FormViewController {
     let people = CoreDataHelper.nameList
@@ -62,9 +63,9 @@ class VisitorsFormController: FormViewController {
     
     @IBAction func signInOut(_ sender: Any) {
         func showErrorMessage(_ msg: String) {
-            let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton:false))
+            alert.addButton("OK", action: {})
+            alert.showError("Error", subTitle: msg)
         }
         
         let values = form.values(includeHidden: false)

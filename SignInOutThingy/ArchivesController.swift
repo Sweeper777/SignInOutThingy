@@ -1,4 +1,5 @@
 import UIKit
+import SCLAlertView
 
 class ArchivesController: UITableViewController {
     var entries: [(date: Date, entries: [Entry])] = []
@@ -18,9 +19,9 @@ class ArchivesController: UITableViewController {
             self.editButtonItem.tintColor = UIColor.white
             self.navigationItem.rightBarButtonItem = self.editButtonItem
         } else {
-            let alert = UIAlertController(title: "Error", message: "Failed to retrieve archives", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton:false))
+            alert.addButton("OK", action: {})
+            alert.showError("Error", subTitle: "Failed to retrieve archives")
         }
     }
 

@@ -2,6 +2,7 @@ import UIKit
 import BNHtmlPdfKit
 import MessageUI
 import SwiftyUtils
+import SCLAlertView
 
 class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailComposeViewControllerDelegate, UIPrintInteractionControllerDelegate {
     var entries: [Entry]!
@@ -33,9 +34,9 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
     
     @IBAction func print(_ sender: Any) {
         guard let pdf = self.pdf else {
-            let alert = UIAlertController(title: "Error", message: "The PDF file is still being generated. Please wait.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton:false))
+            alert.addButton("OK", action: {})
+            alert.showError("Error", subTitle: "The PDF file is still being generated. Please wait.")
             return
         }
         
@@ -58,9 +59,9 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
     
     @IBAction func mail(_ sender: Any) {
         guard let pdf = self.pdf else {
-            let alert = UIAlertController(title: "Error", message: "The PDF file is still being generated. Please wait.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton:false))
+            alert.addButton("OK", action: {})
+            alert.showError("Error", subTitle: "The PDF file is still being generated. Please wait.")
             return
         }
         
@@ -71,9 +72,9 @@ class ArchiveViewerController: UIViewController, BNHtmlPdfKitDelegate, MFMailCom
             mailComposer.addAttachmentData(pdf, mimeType: "application/pdf", fileName: archiveName)
             self.present(mailComposer, animated: true)
         } else {
-            let alert = UIAlertController(title: "Error", message: "Your mail accounts might not be set up.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton:false))
+            alert.addButton("OK", action: {})
+            alert.showError("Error", subTitle: "Your mail accounts might not be set up.")
         }
     }
     

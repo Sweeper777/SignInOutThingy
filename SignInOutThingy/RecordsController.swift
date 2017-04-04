@@ -1,4 +1,5 @@
 import UIKit
+import SCLAlertView
 
 class RecordsController: UITableViewController {
     var entries: [Entry]?
@@ -10,9 +11,9 @@ class RecordsController: UITableViewController {
                 self.entries = self.entries?.filter { !$0.isComplete }
             }
         } else {
-            let alert = UIAlertController(title: "Error", message: "Failed to get records.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton:false))
+            alert.addButton("OK", action: {})
+            alert.showError("Error", subTitle: "Failed to get records.")
         }
     }
     

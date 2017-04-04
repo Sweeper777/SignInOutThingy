@@ -1,6 +1,7 @@
 import UIKit
 import SwiftChart
 import SwiftDate
+import SCLAlertView
 
 class StatisticsController: UITableViewController, ChartDelegate {
     var person: String?
@@ -94,9 +95,9 @@ class StatisticsController: UITableViewController, ChartDelegate {
                 timeOutsideChart.xLabels = Array(stride(from: 0.0, through: Float(groupedWentOutEntries.count), by: 1))
             }
         } else {
-            let alert = UIAlertController(title: "Error", message: "Failed to retrieve statistics", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton:false))
+            alert.addButton("OK", action: {})
+            alert.showError("Error", subTitle: "Failed to retrieve statistics")
         }
     }
     
